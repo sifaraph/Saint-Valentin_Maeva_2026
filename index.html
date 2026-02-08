@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Maéva ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="player" style="position: absolute; visibility: hidden; pointer-events: none;"></div>
+
+    <div id="hearts-bg"></div>
+
+    <div class="main-wrapper">
+        <div id="question-block" class="card fade-in">
+            <div class="heart-main">❤️</div>
+            <h1 class="title">Maéva, veux-tu être ma Valentine ?</h1>
+            <div class="buttons-container">
+                <button id="yesBtn">Oui !</button>
+                <button id="noBtn">Non</button>
+            </div>
+            <p class="timide-text">Le bouton "non" est un peu timide ! 😊</p>
+        </div>
+
+        <div id="loading-screen" class="hidden">
+            <div class="heart-main pulse">❤️</div>
+            <div class="loading-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="loading-text" class="loading-phrase">Initialisation de l'amour...</p>
+        </div>
+
+        <div id="final-screen" class="hidden">
+            <div class="heart-main bounce">❤️</div>
+            <h1 class="big-title">Yesss !</h1>
+            <p class="final-msg">Je savais que tu allais dire oui ❤️</p>
+            <p class="love-text">Je t'aime ma p'tite tête à moiii !</p>
+            <div class="footer-emojis">🌹 ❤️ ✨ 💗 🌹 💞 ✨ ❤️ 🌹</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%);
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+#hearts-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-heart {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.6);
+    animation: float linear forwards;
+}
+
+@keyframes float {
+    to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.main-wrapper {
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centrage total de la carte et du contenu */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 40px;
+    box-shadow: 0 15px 40px rgba(214, 51, 132, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 80%;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    color: #d63384;
+    font-size: 2.3em;
+    margin: 20px 0;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    min-height: 150px; /* Espace pour que le NON ne cache pas le texte */
+}
+
+button {
+    padding: 15px 50px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+}
+
+#yesBtn { 
+    background-color: #a1c4fd; /* Bleu ciel doux */
+    color: white; 
+    box-shadow: 0 8px 20px rgba(161, 196, 253, 0.4);
+    z-index: 10;
+}
+
+#noBtn { 
+    background-color: #ffdde1; 
+    color: #d63384;
+    z-index: 5;
+}
+
+/* Écrans de transition centrés */
+#loading-screen, #final-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.loading-bar-container {
+    width: 280px; height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px; margin: 30px auto;
+}
+
+#progress-bar {
+    width: 0%; height: 100%;
+    background: #a1c4fd;
+    border-radius: 20px;
+}
+
+.big-title { font-size: 5em; color: white; font-family: 'Pacifico', cursive; margin: 10px 0; }
+.love-text { font-size: 1.6em; font-weight: 700; color: white; margin-top: 10px; }
+.final-msg { color: white; font-size: 1.2em; }
+
+.hidden { display: none !important; }
+.fade-in { animation: fadeIn 1s forwards; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.heart-main { font-size: 80px; margin-bottom: 10px; }
+.pulse { animation: beat 0.8s infinite alternate; }
+.bounce { animation: bounce 2s infinite; }
+
+@keyframes beat { to { transform: scale(1.2); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
